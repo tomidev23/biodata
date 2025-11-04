@@ -7,17 +7,16 @@ class DetailProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF1F5F9), // Latar belakang abu-abu muda
+      backgroundColor: const Color(0xFFF5F8FF), // Gradasi latar belakang yang lebih halus
       appBar: AppBar(
-        // Menggunakan warna latar belakang yang lebih bersih
         backgroundColor: const Color(0xFFFFFFFF),
-        surfaceTintColor: Colors.transparent, // Menghilangkan bayangan default di Android
+        surfaceTintColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Detail Biodata',
+          'Detail Biodata"',
           style: GoogleFonts.poppins(
-            color: Colors.blue.shade800, // Judul dengan warna aksen
+            color: Colors.blue.shade800,
             fontWeight: FontWeight.w700,
             fontSize: 20,
           ),
@@ -28,7 +27,7 @@ class DetailProfileScreen extends StatelessWidget {
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.only(left: 24, right: 24, top: 0, bottom: 28),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         children: [
           // Bagian Atas: Foto dan Nama (diperbaiki agar lebih terpusat)
           _buildHeaderProfile(),
@@ -49,10 +48,10 @@ class DetailProfileScreen extends StatelessWidget {
           ),
 
           // Card Informasi Detail - menggunakan list untuk konsistensi
-          _buildInfoCard(Icons.badge, "NIM", "4342411029"),
+          _buildInfoCard(Icons.badge, "NIM", "4342411044"),
           _buildInfoCard(Icons.school, "Program Studi", "Teknologi Rekayasa Perangkat Lunak (TRPL)"),
-          _buildInfoCard(Icons.class_, "Kelas", "TRPL 3A MALAM"),
-          _buildInfoCard(Icons.cake, "Tempat, Tanggal Lahir", "Batam, 29 Mei 2006"),
+          _buildInfoCard(Icons.class_, "Kelas", "TRPL 3B MALAM"),
+          _buildInfoCard(Icons.cake, "Tempat, Tanggal Lahir", "Batam, 07 OKTOBER 2004"),
 
           const SizedBox(height: 20),
 
@@ -69,11 +68,11 @@ class DetailProfileScreen extends StatelessWidget {
             ),
           ),
           
-          _buildInfoCard(Icons.home, "Alamat", "Sukajadi"),
-          _buildInfoCard(Icons.phone, "Nomor Telepon", "081327845690"),
-          _buildInfoCard(Icons.email, "Email", "zahra123@gmail.com"),
-          _buildInfoCard(Icons.movie, "Hobi", "Mendengarkan Musik"),
-          _buildInfoCard(Icons.star, "Cita-cita", "Menjadi Orang Keren dan Baik"),
+          _buildInfoCard(Icons.home, "Alamat", "SEKUPANG"),
+          _buildInfoCard(Icons.phone, "Nomor Telepon", "087727938918"),
+          _buildInfoCard(Icons.email, "Email", "davarevaldo0710.com"),
+          _buildInfoCard(Icons.movie, "Hobi", "BERMAIN BOLA"),
+          _buildInfoCard(Icons.star, "Cita-cita", "Ingin Mempunyai bisnis"),
 
           const SizedBox(height: 35),
 
@@ -85,7 +84,7 @@ class DetailProfileScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
-              elevation: 4,
+              elevation: 6,
               shadowColor: Colors.blue.shade200.withOpacity(0.8),
             ),
             onPressed: () => Navigator.pop(context),
@@ -119,22 +118,22 @@ class DetailProfileScreen extends StatelessWidget {
             ],
           ),
           child: const CircleAvatar(
-            radius: 65,
-            backgroundImage: AssetImage('assets/images/zahra.jpeg'),
+            radius: 75,
+            backgroundImage: AssetImage('assets/images/dava.jpg'),
           ),
         ),
         const SizedBox(height: 16),
         Text(
-          "Zahrah Sakinah",
+          "Dava Revaldo Saputra",
           style: GoogleFonts.poppins(
-            fontSize: 24,
+            fontSize: 26,
             fontWeight: FontWeight.w800,
             color: Colors.blue.shade900,
           ),
         ),
         const SizedBox(height: 6),
         Text(
-          "Mahasiswa TRPL 3A Malam",
+          "Mahasiswa Teknologi Rekayasa Perangkat lunak 3B Malam",
           style: GoogleFonts.poppins(
             fontSize: 16,
             color: Colors.grey[600],
@@ -148,7 +147,7 @@ class DetailProfileScreen extends StatelessWidget {
   // Card bergaya modern untuk tiap item biodata
   Widget _buildInfoCard(IconData icon, String label, String value) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 12), // Mengurangi margin antar card
+      margin: const EdgeInsets.only(bottom: 16), // Mengurangi margin antar card
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -165,14 +164,14 @@ class DetailProfileScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.blue.shade50,
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(12),
             ),
-            child: Icon(icon, color: Colors.blue.shade600, size: 24),
+            child: Icon(icon, color: Colors.blue.shade600, size: 26),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(width: 18),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
