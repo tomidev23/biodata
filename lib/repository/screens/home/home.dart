@@ -18,11 +18,11 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 40, bottom: 20),
                 child: Text(
-                  "Biodata Saya",
+                  "Profile",
                   style: GoogleFonts.poppins(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blue.shade800,
+                    color: Colors.black45,
                   ),
                 ),
               ),
@@ -44,8 +44,8 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 child: const CircleAvatar(
-                  radius: 80,
-                  backgroundImage: AssetImage('assets/images/dava.jpg'),
+                  radius: 90,
+                  backgroundImage: AssetImage('assets/images/destia.jpeg'),
                 ),
               ),
 
@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Dava Revaldo Saputra",
+                      "Destia",
                       style: GoogleFonts.poppins(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      "NIM: 4342411044",
+                      "NIM: 4342411032",
                       style: GoogleFonts.poppins(
                         fontSize: 16,
                         color: Colors.grey[700],
@@ -105,7 +105,6 @@ class HomeScreen extends StatelessWidget {
                    
                     const SizedBox(height: 20),
 
-                    // Modern, interactive action button
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -135,7 +134,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           const SizedBox(width: 10),
                           Text(
-                            "Lihat Detail Profil",
+                            "Detail Profil",
                             style: GoogleFonts.poppins(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
@@ -146,10 +145,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-
-              const SizedBox(height: 40),
-            ],
+              ),            ],
           ),
         ),
       ),
