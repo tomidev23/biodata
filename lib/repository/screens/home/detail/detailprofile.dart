@@ -7,14 +7,14 @@ class DetailProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFE8F0F9),
+      backgroundColor: Colors.white, 
       appBar: AppBar(
-        backgroundColor: const Color(0xFF2C3E50),
+        backgroundColor: const Color(0xFF000000), 
         elevation: 4,
         centerTitle: true,
         title: Text(
-          'Profile Detail',
-          style: GoogleFonts.lora(
+          'Detail Profile',
+          style: GoogleFonts.poppins(
             color: Colors.white,
             fontWeight: FontWeight.w600,
             fontSize: 22,
@@ -29,26 +29,19 @@ class DetailProfileScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         children: [
           _buildHeaderProfile(),
-
           const SizedBox(height: 20),
-
-          _buildSectionTitle("Academic & Personal Info"),
-          _buildInfoCard(Icons.badge, "Student ID", "4342411044"),
-          _buildInfoCard(Icons.school, "Program", "Software Engineering (TRPL)"),
-          _buildInfoCard(Icons.class_, "Class", "TRPL 3B Night"),
-          _buildInfoCard(Icons.cake, "Birth", "Batam, December 12, 2004"),
-
+          _buildSectionTitle("Personal Info"),
+          _buildInfoCard(Icons.badge, "Nim", "4342411083"),
+          _buildInfoCard(Icons.school, "Prodi", "Teknologi Rekayasa Perangkat Lunak"),
+          _buildInfoCard(Icons.cake, "Tempat, Tanggal Lahir", "Batam, 23 Juni 2006"),
           const SizedBox(height: 20),
-
-          _buildSectionTitle("Contact & Interests"),
-          _buildInfoCard(Icons.home, "Address", "Batam Center"),
-          _buildInfoCard(Icons.phone, "Phone", "085668215853"),
-          _buildInfoCard(Icons.email, "Email", "destia253@gmail.com"),
-          _buildInfoCard(Icons.movie, "Hobby", "Salto"),
-          _buildInfoCard(Icons.star, "Dream", "Modom"),
-
+          _buildSectionTitle("Kontak & Minat"),
+          _buildInfoCard(Icons.home, "Alamat", "Batam Center"),
+          _buildInfoCard(Icons.phone, "Kontak", "082289940214"),
+          _buildInfoCard(Icons.email, "Email", "sitiacikamustamin2006@gmail.com"),
+          _buildInfoCard(Icons.movie, "Hobi", "Nyanyi, Berenang, Marah-Marah"),
+          _buildInfoCard(Icons.star, "Cita-cita", "Awalnya bidan eh malah TRPL"),
           const SizedBox(height: 40),
-
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(vertical: 16),
@@ -56,12 +49,12 @@ class DetailProfileScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
               elevation: 5,
-              shadowColor: Colors.blue.shade200.withOpacity(0.8),
+              shadowColor: Colors.pink.shade200.withOpacity(0.8),
             ),
             onPressed: () => Navigator.pop(context),
             child: Text(
               "Back to Home",
-              style: GoogleFonts.lora(
+              style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
                 fontSize: 16,
@@ -82,7 +75,7 @@ class DetailProfileScreen extends StatelessWidget {
             border: Border.all(color: Colors.white, width: 4),
             boxShadow: [
               BoxShadow(
-                color: Colors.blue.shade100.withOpacity(0.6),
+                color: Colors.pinkAccent.withOpacity(0.6),
                 blurRadius: 15,
                 spreadRadius: 3,
               ),
@@ -90,22 +83,22 @@ class DetailProfileScreen extends StatelessWidget {
           ),
           child: const CircleAvatar(
             radius: 80,
-            backgroundImage: AssetImage('assets/images/destia.jpeg'),
+            backgroundImage: AssetImage('assets/images/siti.jpeg'),
           ),
         ),
         const SizedBox(height: 18),
         Text(
-          "Destia",
-          style: GoogleFonts.lora(
+          "Sitiacika Mustamin",
+          style: GoogleFonts.poppins(
             fontSize: 26,
             fontWeight: FontWeight.bold,
-            color: Colors.blue.shade900,
+            color: Colors.pinkAccent.shade700,
           ),
         ),
         const SizedBox(height: 8),
         Text(
-          "Student KupuKupu ",
-          style: GoogleFonts.lora(
+          "Mahasiswa",
+          style: GoogleFonts.poppins(
             fontSize: 16,
             color: Colors.grey[600],
             fontWeight: FontWeight.w500,
@@ -125,7 +118,7 @@ class DetailProfileScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
-            color: Colors.blue.shade50.withOpacity(0.5),
+            color: Colors.pink.shade50.withOpacity(0.5),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -136,10 +129,10 @@ class DetailProfileScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: Colors.blue.shade50,
+              color: Colors.pink.shade50,
               borderRadius: BorderRadius.circular(10),
             ),
-            child: Icon(icon, color: Colors.blue.shade600, size: 28),
+            child: Icon(icon, color: Colors.pink.shade600, size: 28),
           ),
           const SizedBox(width: 20),
           Expanded(
@@ -148,7 +141,7 @@ class DetailProfileScreen extends StatelessWidget {
               children: [
                 Text(
                   label,
-                  style: GoogleFonts.lora(
+                  style: GoogleFonts.poppins(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: Colors.grey[700],
@@ -157,7 +150,7 @@ class DetailProfileScreen extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   value,
-                  style: GoogleFonts.lora(
+                  style: GoogleFonts.poppins(
                     fontSize: 16,
                     color: Colors.black87,
                     fontWeight: FontWeight.w500,
@@ -177,10 +170,10 @@ class DetailProfileScreen extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8.0, bottom: 12),
       child: Text(
         title,
-        style: GoogleFonts.lora(
+        style: GoogleFonts.poppins(
           fontSize: 18,
           fontWeight: FontWeight.w600,
-          color: Colors.blue.shade700,
+          color: Colors.pink.shade700,
         ),
       ),
     );
